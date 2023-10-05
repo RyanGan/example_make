@@ -1,0 +1,48 @@
+---
+Title: Example Report
+Author: Ryan Gan
+format: pdf
+---
+
+## Example report
+
+Sourcing config lists and printing elements.
+
+```{r readlist}
+source('../R/00-config.R')
+
+```
+
+Vector 1.
+```{r vec1}
+cat('List vec1 element numbers:', test_list$vec1)
+```
+
+Vector 2.
+
+```{r vec2}
+cat('List vec2 element numbers:', test_list$vec2)
+```
+
+Date window in config.
+
+```{r dates}
+print('Date Windows:')
+test_list$date_window
+```
+
+
+Loading in summary text and plots from 02-analysis.R script.
+
+```{r comment = ''}
+cat(
+    readLines('../results/02-lung_median_times.txt'),
+    sep = '\n'
+    )
+```
+
+Plot.
+
+![Survival_Plot](../results/02-survival.png)
+
+
